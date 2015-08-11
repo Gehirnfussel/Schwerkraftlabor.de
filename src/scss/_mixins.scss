@@ -1,0 +1,97 @@
+// Usage: Light-on-dark = on
+@mixin font-smoothing($value: on) {
+	@if $value == on {
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+	@else {
+		-webkit-font-smoothing: subpixel-antialiased;
+		-moz-osx-font-smoothing: auto;
+	}
+}
+
+@mixin box-sizing($model) {
+	-webkit-box-sizing: $model;
+	-moz-box-sizing: $model;
+	box-sizing: $model;
+}
+
+@mixin border-radius($radius) {
+	-moz-border-radius: $radius;
+	-webkit-border-radius: $radius;
+	border-radius: $radius;
+}
+
+@mixin transition($transition) {
+	-moz-transition: $transition;
+	-webkit-transition: $transition;
+	-o-transition: $transition;
+	transition: $transition;
+}
+
+@mixin box-shadow ($boxshadow) {
+	-moz-box-shadow: $boxshadow;
+	-webkit-box-shadow: $boxshadow;
+	box-shadow: $boxshadow;
+}
+@mixin linear-gradient4 ($f1, $f2, $f3, $f4) {
+	background: -moz-linear-gradient(top, $f1, $f2, $f3, $f4); /* FF3.6+ */
+	background: -webkit-linear-gradient(top, $f1, $f2, $f3, $f4); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, $f1, $f2, $f3, $f4); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, $f1, $f2, $f3, $f4); /* IE10+ */
+	background: linear-gradient(to bottom, $f1, $f2, $f3, $f4); /* W3C */
+}
+
+@mixin linear-gradient ($f1, $f2) {
+	background: -moz-linear-gradient(top, $f1 0%, $f2 100%); /* FF3.6+ */
+	background: -webkit-linear-gradient(top, $f1 0%, $f2 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, $f1 0%, $f2 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, $f1 0%, $f2 100%); /* IE10+ */
+	background: linear-gradient(to bottom, $f1 0%, $f2 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$f1', endColorstr='$f2',GradientType=0 ); /* IE6-9 */
+}
+
+@mixin linear-gradient6 ($a1, $a2, $a3, $a4, $a5, $a6) {
+	background: -moz-linear-gradient($a1, $a2, $a3, $a4, $a5, $a6); /* FF3.6+ */
+	background: -webkit-linear-gradient($a1, $a2, $a3, $a4, $a5, $a6); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient($a1, $a2, $a3, $a4, $a5, $a6); /* Opera 11.10+ */
+	background: -ms-linear-gradient($a1, $a2, $a3, $a4, $a5, $a6); /* IE10+ */
+	background: linear-gradient($a1, $a2, $a3, $a4, $a5, $a6); /* W3C */
+}
+
+@mixin hyphens ($value) {
+	-webkit-hyphens: $value;
+	-moz-hyphens: $value;
+	-ms-hyphens: $value;
+	hyphens: $value;
+}
+
+@mixin vertical-align {
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+
+	// IE 6-10 hack
+	position: inherit\9;
+	top: inherit\9;
+	-ms-transform: translateY(0%)\9;
+	display:table-cell\9;
+	vertical-align:middle\9;
+}
+
+@mixin vertical-align2 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@mixin flexbox {
+	display: -webkit-box;
+	-webkit-box-orient: horizontal;
+	display: -moz-box;
+	-moz-box-orient: horizontal;
+	display: box;
+	box-orient: horizontal;
+}

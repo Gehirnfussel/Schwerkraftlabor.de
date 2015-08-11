@@ -1,0 +1,118 @@
+/*  Vars
+--------------------------*/
+
+$font-sans-serif: Open Sans, Helvetica, Arial, sans-serif;
+$font-serif: Droid Serif, Georgia, serif;
+$font-mono: Courier, monospace;
+
+/*  Reset
+--------------------------*/
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    height: 100%;
+    box-sizing: border-box;
+    text-size-adjust: 100%;
+}
+
+/* Ideal Viewport-Fix for IE */
+@-ms-viewport {
+    width: device-width;
+}
+
+/*  Cleafix
+--------------------------*/
+.clearfix::before,
+.clearfix::after {
+    content: " ";
+    display: table;
+}
+
+.clearfix::after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/*
+  FLUIDITY v0.1.0
+  @mrmrs - http://mrmrs.cc
+  MIT
+*/
+
+@import "responsive-utilities";
+
+
+/*  Video-Container
+--------------------------*/
+
+.video {
+    position: relative;
+    height: 0;
+    padding-bottom: 56.25%;
+
+    & > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    }
+}
+
+/*  Grid and stuff
+--------------------------*/
+.container {
+    margin: 0 auto;
+    /*max-width: 960px;
+    width: 90%;*/
+}
+
+.row {
+    overflow: hidden;
+    max-width: 960px;
+    margin: 0 auto;
+}
+.fullrow {
+    max-width: 100%;
+}
+
+.column {
+    float: left;
+    margin-left: 5%;
+}
+
+.column:first-child {
+    margin-left: 0;
+}
+
+.column.full {
+    width: 100%;
+}
+
+.column.three-fourth {
+    width: 63.75%;
+}
+
+.column.two-thirds {
+    width: 65%;
+}
+
+.column.half {
+    width: 47.5%;
+}
+
+.column.one-third {
+    width: 30%;
+}
+
+.column.one-fourth {
+    width: 21.25%;
+}

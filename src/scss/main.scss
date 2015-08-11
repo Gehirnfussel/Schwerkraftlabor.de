@@ -1,0 +1,152 @@
+/*----------------------------------------*\
+	Schwerkraftlabor.de | @Gehirnfussel
+\*----------------------------------------*/
+
+/*		Imports
+--------------------------*/
+
+@import 'normalize';
+@import 'defaults';
+@import 'mixins';
+/* @import 'font-awesome'; */
+
+/*	Content
+--------------------------*/
+
+$linkcolor: #660000;
+
+body {
+	color: #000;
+	font-family: $font-sans-serif;
+	font-size: 12pt;
+	@include font-smoothing(off);
+}
+h1, h2, h3 {
+	font-family: $font-sans-serif;
+	font-weight: 700;
+	line-height: 1.2em;
+	margin: 0.4em 0.0em;
+}
+h1 {
+	font-size: 2.0em;
+	word-break: break-all;
+}
+h2 {
+	font-size: 1.5em;
+}
+h3 {
+	font-size: 1.25em;
+}
+p {
+	line-height: 1.45em;
+	padding: 0.5em 0;
+}
+ul {
+	li {
+		margin: 0.3em 0em 0.3em 0.5em;
+		list-style-position: inside;
+		list-style-type: square;
+		font-size: 1em;
+
+		p {
+			padding-left: 1em;
+		}
+	}
+}
+a {
+	color: $linkcolor;
+	transition: color 0.2s ease;
+	&:hover, &:active, &:focus{
+		color: lighten($linkcolor, 15%);
+	}
+	&:active {
+		position: relative;
+		top: 1px;
+	}
+}
+a.notdown {
+	&:active {
+		position: inherit;
+	}
+}
+@media screen {
+	a.external:after {
+		content: "\00A0" "[" "\2197" "]";
+	}
+}
+@media print {
+	a[href]:after {
+		content: " (" attr(href) ")";
+	}
+}
+
+/*	Header
+--------------------------*/
+
+
+
+
+/*	Content
+--------------------------*/
+
+.fa {
+	margin-right: 0.3em;
+	speak: none; /* Won't speak the symbol | badly supported by browsers */
+}
+
+.button {
+	text-overflow: ellipsis; // Overflow = "..."
+}
+
+
+
+/*	Footer
+--------------------------*/
+
+
+
+
+/*	Responsive Stuff
+--------------------------*/
+
+@media screen and (max-width: 768px) {
+	.column.full,
+	.column.three-fourth,
+	.column.two-thirds,
+	.column.half {
+		float: none;
+		margin: 0;
+		width: 100%;
+	}
+	.column.one-third,
+	.column.one-fourth {
+		float: left;
+		margin: 0;
+		width: 50%;
+		padding: 0.4em;
+	}
+}
+
+@media screen and (max-width: 568px) {
+	.column.one-third,
+	.column.two-third {
+		float: none;
+		margin: 0;
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 480px) {
+.column.one-third,
+.column.one-fourth,
+.column.full,
+.column.three-fourth,
+.column.two-thirds,
+.column.half,
+.column.full {
+	float: left;
+	margin: 0;
+	width: 100%;
+}
+
+}
