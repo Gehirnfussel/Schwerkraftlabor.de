@@ -1,17 +1,17 @@
 {
-	"name": "ProjectName",
-	"description": "Project description",
-	"version": "1.0.0",
+	"name": "Schwerkraftlabor Mainpage",
+	"description": "Main website of the Schwerkraftlabor",
+	"version": "2.0.0a",
 	"author": "Jan Jastrow",
-	"license": "MIT",
-	"homepage": "http://projecturl.skl",
-	"url" : "http://github.com/Gehirnfussel/project/",
+	"license": "none",
+	"homepage": "http://schwerkraftlabor.de",
+	"url" : "https://github.com/Gehirnfussel/Schwerkraftlabor.de",
 	"email" : "jan@schwerkraftlabor.de",
 	"scripts": {},
 	"main": "gulpfile.js",
 	"repository": {
 	    "type": "git",
-	    "url": "https://bitbucket.org/Gehirnfussel/project"
+	    "url": "https://github.com/Gehirnfussel/Schwerkraftlabor.de"
 	},
 	"dependencies": {},
 	"devDependencies": {
